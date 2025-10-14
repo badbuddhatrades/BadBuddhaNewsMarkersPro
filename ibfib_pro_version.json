@@ -1,0 +1,14 @@
+{
+  "version": "v2.0.0.0",
+  "notes": "Performance and stability fixes.",
+  "downloadUrl": "https://github.com/badbuddhatrades/BadBuddhaIBFibPRO/raw/refs/heads/main/BadBuddhaIBFibPRO.zip",
+  "published": "2025-09-28",
+  "author": "BadBuddhaCustoms",
+  "breakingChanges": false,
+  "changelog": [
+    "Smoothed IB lock timing around session boundaries",
+    "Added update popup with NTWindow",
+    "Added four IB block calcuation modes, for different sessions",
+    "Added user control for line and color options"
+  ]
+}
