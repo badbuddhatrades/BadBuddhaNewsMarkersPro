@@ -1,160 +1,439 @@
 # BadBuddha NewsMarkers PRO
 
+<div align="center">
+
+![Version](https://img.shields.io/badge/version-v4.1.0-blue)
+![Platform](https://img.shields.io/badge/platform-NinjaTrader%208-green)
+![License](https://img.shields.io/badge/license-NinjaTrader%20Vendor-orange)
+![Product ID](https://img.shields.io/badge/Product%20ID-331-purple)
+
+**Professional economic news calendar with visual markers, blackout windows, and live countdowns**
+
+[Features](#-key-features) • [Installation](#-installation) • [Settings Guide](#-settings-guide) • [Use Cases](#-use-cases) • [Free Trial](#-14-day-free-trial)
+
+</div>
+
+---
+
+## Table of Contents
+
+- [Overview](#-overview)
+- [Why Traders Use This](#-why-traders-use-this)
+- [Key Features](#-key-features)
+- [PRO vs Free Comparison](#-pro-vs-free-comparison)
+- [Installation](#-installation)
+- [Settings Guide](#-settings-guide)
+- [Use Cases](#-use-cases)
+- [Troubleshooting](#-troubleshooting)
+- [14-Day Free Trial](#-14-day-free-trial)
+- [Support](#-support)
+
+---
+
 ## Overview
 
-BadBuddha NewsMarkers PRO is a professional-grade news calendar indicator for NinjaTrader 8 that helps traders avoid getting caught in high-volatility news events. The indicator automatically marks economic news releases directly on your charts with visual markers, blackout windows, and live countdowns.
+**BadBuddha NewsMarkers PRO** is a professional-grade news calendar indicator for NinjaTrader 8 that helps traders avoid getting caught in high-volatility news events. The indicator automatically marks economic news releases directly on your charts with visual markers, blackout windows, and live countdowns - so you always know when to stay out of the market.
+
+### Version Information
+
+| Info | Details |
+|------|---------|
+| **Version** | v4.2.0 |
+| **Edition** | PRO (Licensed) |
+| **Author** | BadBuddha Customs LLC |
+
+
+---
 
 ## Why Traders Use This
 
-- **Avoid News Whipsaws**: Know exactly when high-impact news is about to hit before your positions get stopped out
-- **Protect Your Capital**: Automatically visualize blackout windows where trading should be avoided
-- **Stay Informed**: Live countdown timers show exactly how many minutes until the next major news event
-- **Automated Updates**: No manual calendar checking - news data automatically downloads and updates
-- **Multi-Timeframe**: Works on any chart timeframe from tick charts to daily charts
-- **Strategy Integration**: Access news data programmatically from your automated strategies
+**Stop getting stopped out by news events you didn't see coming.**
+
+- **Avoid News Whipsaws** - Visual warnings before high-impact news hits
+- **Protect Your Capital** - Automatic blackout windows show when NOT to trade
+- **Stay Informed** - Live countdown timers to the next major event
+- **Focus on Trading** - Automated updates, no manual calendar checking
+- **Multi-Timeframe** - Works on any chart from tick to daily
+- **Strategy-Ready** - Programmatic access for automated trading systems
 
 ## Key Features
 
-### Visual News Markers
-- High and Medium impact news events displayed as vertical lines on your chart
-- Customizable colors and opacity for each impact level
-- Optional event labels showing the news title and countdown
-- Country flags displayed for visual currency identification
+### 1. Visual News Markers
 
-### Blackout Windows
-- Shaded rectangular zones showing pre/post event danger periods
-- Separate settings for High and Medium impact events
-- Configurable minutes before and after each event
-- Adjustable opacity to keep your chart clean
+Mark high-impact economic releases directly on your charts:
 
-### Events Table
-- Live table overlay showing upcoming news events
-- "Due In" column with countdown timers
-- Display Actual/Forecast/Previous data values
-- Flexible positioning (top-left, top-right, bottom-left, bottom-right)
-- Can be shown as overlay on chart or separate popout window
+- Vertical lines at exact event times
+- High and Medium impact filtering
+- Customizable colors and opacity
+- Optional event title labels with countdown timers
+- Country flags for currency identification
 
-### Currency Filtering
-- Filter events by specific currencies (USD, EUR, GBP, AUD, NZD, CAD, CHF, JPY, CNY)
-- Perfect for forex traders focusing on specific pairs
-- Simple checkbox interface - no typing required
-- Enable/disable filter with a single toggle
+### 2. Blackout Windows
 
-### Real-Time Alerts
-- Audio alerts at configurable intervals before news events (e.g., 15 min, 5 min, 1 min)
-- Separate alert settings for High and Medium impact
-- Customizable alert messages with event details
-- Option to only alert during trading hours
+Visual "no-trade zones" around news events:
 
-### Strategy Integration
-- `IsInNewsWindow` property - check if currently in a blackout period
-- `MinutesToNextHighImpact` - minutes until next high impact event
-- `MinutesToNextMediumImpact` - minutes until next medium impact event
-- `UpcomingEventTitle` - name of the next upcoming event
-- Perfect for automated trading systems that need to avoid news
+- Shaded rectangles showing danger periods
+- Separate pre/post windows for High and Medium impact
+- Configurable minutes before and after (default: 5 min)
+- Adjustable transparency to keep charts readable
 
-### Auto-Updates
-- Automatic CSV download from Google Drive
-- Configurable update intervals (default: every 5 minutes)
-- Built-in version checker notifies you of indicator updates
-- File system monitoring for instant reload on manual CSV updates
+### 3. Live Events Table
 
-## Settings Guide
+Real-time table showing upcoming news:
 
-### 01. Data Source
-- **Trading Mode**: Choose between Realtime (current week only) or Historical (full calendar)
-- **CSV File Name**: Name of the calendar CSV file
-- **Auto Reload Minutes**: How often to check for CSV updates
-- **Google Drive URL**: Source URL for automatic calendar downloads
-- **Force CSV Download**: Force immediate re-download of calendar data
+- "Due In" countdown column
+- Actual/Forecast/Previous data values
+- Flexible positioning (4 corners)
+- Overlay on chart or separate popout window
+- Customizable row count and sizing
 
-### 02. Display
-- **Show Vertical Lines**: Display vertical lines at news event times
-- **Line Opacity (%)**: Transparency of vertical lines (0-100)
-- **Line Thickness (px)**: Width of vertical lines in pixels
-- **Show Event Labels**: Display event title and details near markers
-- **Show Countdown Labels**: Show live countdown timers on labels
-- **Label Title Max Chars**: Truncate long titles to this length
-- **Countdown Clock**: Use wall clock time, chart time, or auto-detect
+### 4. Currency Filtering (NEW in v4.1)
 
-### 03. Blackout Windows
-- **Enable Blackout High**: Show blackout zones for high impact events
-- **Enable Blackout Medium**: Show blackout zones for medium impact events
-- **High: Pre (min)**: Minutes before high impact event to start blackout
-- **High: Post (min)**: Minutes after high impact event to end blackout
-- **Medium: Pre (min)**: Minutes before medium impact event to start blackout
-- **Medium: Post (min)**: Minutes after medium impact event to end blackout
-- **Blackout Opacity (%)**: Transparency of blackout rectangles
+Focus only on currencies you trade:
 
-### 04. Currency Filter
-- **Enable Currency Filter**: Master toggle to enable currency filtering
-- **Show USD Events**: Display events for US Dollar
-- **Show EUR Events**: Display events for Euro
-- **Show GBP Events**: Display events for British Pound
-- **Show AUD Events**: Display events for Australian Dollar
-- **Show NZD Events**: Display events for New Zealand Dollar
-- **Show CAD Events**: Display events for Canadian Dollar
-- **Show CHF Events**: Display events for Swiss Franc
-- **Show JPY Events**: Display events for Japanese Yen
-- **Show CNY Events**: Display events for Chinese Yuan
+- Checkbox selection for 9 major currencies
+- USD, EUR, GBP, AUD, NZD, CAD, CHF, JPY, CNY
+- No typing required - simple on/off toggles
+- Perfect for forex and currency futures traders
+- Enable/disable entire filter with one switch
 
-### 05. Date Range
-- **Past Days**: How many days in the past to load events (0 = today only)
-- **Future Days**: How many days in the future to load events (0 = today only)
+### 5. Real-Time Alerts
 
-### 08. Events Table
-- **Show Events Table**: Enable the upcoming events table
-- **Table Display Mode**: Choose Overlay (on chart), Popout (separate window), or Both
-- **Max Rows**: Maximum number of events to show in table
-- **Width (px)**: Table width in pixels
-- **Row Height (px)**: Height of each row
-- **Opacity (%)**: Table background transparency
-- **Corner**: Position on chart (TopLeft, TopRight, BottomLeft, BottomRight)
-- **Title Max Chars**: Maximum characters for event titles
-- **Vertical Offset (px)**: Distance from edge of chart
-- **Show Data Columns (A/F/P)**: Display Actual/Forecast/Previous values
+Never miss an important news event:
 
-### 09. Alerts
-- **Enable Alerts**: Turn on audio alerts for news events
-- **Alert High Impact Events**: Fire alerts for high impact news
-- **Alert Medium Impact Events**: Fire alerts for medium impact news
-- **Alert Windows (minutes)**: Comma-separated alert times (e.g., "15,5,1")
-- **Alert Sound File**: Name of WAV file to play
-- **Alert Priority**: Alert priority level
-- **Alert Only During Trading Hours**: Restrict alerts to market hours
-- **Alert Message Format**: Customize alert text with placeholders
+- Audio alerts at multiple intervals (e.g., 15, 5, 1 min)
+- Separate settings for High vs Medium impact
+- Customizable alert messages with placeholders
+- Optional trading hours restriction
+- Duplicate alert prevention
 
-### 10. Updates
-- **Enable Update Check**: Check for new indicator versions
-- **Show Popup**: Display popup window when updates are available
+### 6. Strategy Integration
 
-## How to Use
+Programmatic access for automated systems:
 
-1. **Install**: Import the indicator into NinjaTrader 8
-2. **Add to Chart**: Apply "BadBuddha_NewsMarkers_PRO" to any chart
-3. **Configure**: Adjust settings in the indicator properties panel
-4. **Currency Filter** (Optional): Enable currency filter and select which currencies you want to track
-5. **Monitor**: Watch for vertical lines, blackout windows, and countdown timers
-6. **Integrate** (Optional): Access news data from your strategies using the provided properties
+```csharp
+// Check if currently in news blackout
+if (newsIndicator.IsInNewsWindow) return;
 
-## 14-Day Free Trial
+// Minutes to next high impact event
+int minutes = newsIndicator.MinutesToNextHighImpact;
 
-Try BadBuddha NewsMarkers PRO **free for 14 days** with full functionality. No credit card required.
+// Get upcoming event title
+string title = newsIndicator.UpcomingEventTitle;
+```
 
-After the trial period, a license is required to continue using the indicator.
+Perfect for protecting automated strategies from news volatility.
 
-## Getting More Information
+### 7. Auto-Updates
 
-- **Support**: For technical support and questions, please contact BadBuddha Customs
-- **Updates**: The indicator automatically checks for updates and will notify you when new versions are available
+Set it and forget it:
 
+- Configurable refresh intervals (default: 5 min)
+- Built-in version checker for indicator updates
+- File system monitoring for instant reloads
+- No manual calendar management
 
-## System Requirements
+---
+
+## PRO vs Free Comparison
+
+| Feature | Free Version | PRO Version |
+|---------|--------------|-------------|
+| **Visual Markers** | High impact only | High + Medium impact |
+| **Blackout Windows** | Basic | Advanced with separate High/Medium settings |
+| **Events Table** | Basic overlay | Advanced with popout, A/F/P data |
+| **Currency Filtering** | None | 9 currencies with checkbox control |
+| **Live Countdowns** | No | Yes - real-time updates |
+| **Alerts** | No | Yes - multi-interval audio alerts |
+| **Strategy Integration** | No | Full API access |
+| **Auto CSV Updates** | Manual only | Automatic from cloud |
+| **Date Range Control** | Fixed | Customizable past/future days |
+| **Update Checker** | 7-day check | 1-day check with popup |
+| **Support** | Community | Priority support |
+
+---
+
+## Installation
+
+### Prerequisites
 
 - NinjaTrader 8.1 or higher
 - Windows operating system
-- Internet connection for automatic calendar updates
+- Internet connection for calendar updates
+
+### Installation Steps
+
+1. **Download**
+   - Download `BadBuddha_NewsMarkersPRO.zip` from BadBuddha Customs
+
+2. **Import to NinjaTrader**
+   ```
+   1. Open NinjaTrader Control Center
+   2. Tools > Import > NinjaScript Add-On
+   3. Browse to the .zip file
+   4. Click Import
+   5. Wait for "Import successful"
+   ```
+
+3. **Add to Chart**
+   ```
+   1. Right-click any chart
+   2. Select Indicators
+   3. Find "BadBuddha_NewsMarkers_PRO"
+   4. Click Add
+   5. Configure settings
+   ```
+
+4. **First-Time Setup**
+   - Start with default settings
+   - Enable currency filter if trading forex
+   - Adjust blackout windows to your risk tolerance
+   - Configure alerts if desired
+
+---
+
+## Settings Guide
+
+### Data Source
+
+| Setting | Description | Default |
+|---------|-------------|---------|
+| **Trading Mode** | Realtime (current week) or Historical (full calendar) | Realtime |
+| **Auto Reload Minutes** | How often to check for updates | 5 |
+| **Force CSV Download** | Force immediate re-download | false |
+
+### Display Options
+
+| Setting | Description | Default |
+|---------|-------------|---------|
+| **Show Vertical Lines** | Display lines at event times | true |
+| **Line Opacity (%)** | Line transparency | 25 |
+| **Line Thickness (px)** | Line width | 3 |
+| **Show Event Labels** | Display event titles | false |
+| **Show Countdown Labels** | Live countdown timers | false |
+
+### Blackout Windows
+
+| Setting | Description | Default |
+|---------|-------------|---------|
+| **Enable Blackout High** | Show High impact blackouts | true |
+| **High: Pre/Post (min)** | Minutes before/after High events | 5 / 5 |
+| **Enable Blackout Medium** | Show Medium impact blackouts | true |
+| **Medium: Pre/Post (min)** | Minutes before/after Medium events | 3 / 3 |
+| **Blackout Opacity (%)** | Rectangle transparency | 15 |
+
+### Currency Filter (NEW)
+
+| Setting | Description | Default |
+|---------|-------------|---------|
+| **Enable Currency Filter** | Master toggle | false |
+| **Show [Currency]** | Individual checkboxes for USD, EUR, GBP, AUD, NZD, CAD, CHF, JPY, CNY | All true |
+
+**Example:** To see only USD and EUR events, enable the filter and check only USD and EUR boxes.
+
+### Events Table
+
+| Setting | Description | Default |
+|---------|-------------|---------|
+| **Show Events Table** | Enable table display | true |
+| **Table Display Mode** | Overlay, Popout, or Both | Overlay |
+| **Max Rows** | Number of events shown | 12 |
+| **Corner** | TopLeft, TopRight, BottomLeft, BottomRight | TopLeft |
+
+### Alerts
+
+| Setting | Description | Default |
+|---------|-------------|---------|
+| **Enable Alerts** | Turn on audio alerts | false |
+| **Alert High/Medium** | Which impacts trigger alerts | High: true, Medium: false |
+| **Alert Windows** | Alert times before event (CSV) | "15,5" |
+| **Alert Message Format** | Customize with placeholders | "{IMPACT} Impact in {MINUTES} min: {TITLE}" |
+
+---
+
+## Use Cases
+
+### Day Trading Index Futures (ES, NQ, YM)
+
+**Setup:**
+- Enable USD filter only
+- Blackout: High Pre/Post = 5 min
+- Alerts: 15 min, 5 min warnings
+- Events table in TopRight corner
+
+**Why:** Avoid Fed announcements, CPI, NFP, and other USD events that cause massive spikes.
+
+### Forex Trading (EUR/USD, GBP/USD)
+
+**Setup:**
+- Enable USD, EUR, GBP filters
+- Blackout: High = 5 min, Medium = 3 min
+- Show countdown labels on chart
+- Alerts during trading hours only
+
+**Why:** Currency pairs react to news from both base and quote currencies.
+
+### Automated Strategy Protection
+
+```csharp
+// In your strategy OnBarUpdate():
+BadBuddha_NewsMarkersPRO news = Indicators.BadBuddha_NewsMarkersPRO();
+
+// Don't enter new positions during blackout
+if (news.IsInNewsWindow) return;
+
+// Close positions 15 min before high impact news
+if (Position.MarketPosition != MarketPosition.Flat
+    && news.MinutesToNextHighImpact < 15)
+{
+    ExitLong();
+    ExitShort();
+}
+```
+
+### Overnight Trading
+
+**Setup:**
+- Enable all relevant currencies
+- Date Range: Past Days = 0, Future Days = 1
+- Trading Mode: Realtime
+
+**Why:** See tomorrow's news events to avoid holding positions through major releases.
+
+---
+
+## Troubleshooting
+
+### Events Not Showing
+
+**Check:**
+- CSV file exists in `Documents\NinjaTrader 8\` folder
+- Trading Mode matches your needs (Realtime vs Historical)
+- Date Range includes today (Past Days ≥ 0)
+- Currency filter not blocking all events
+
+**Solution:**
+- Enable "Force CSV Download" and reload chart
+- Check Output window (Tools > Output Window) for errors
+
+### Wrong Event Times
+
+**Check:**
+- Computer timezone settings
+- Chart time vs wall clock time
+- Countdown Clock setting (Auto, WallClock, ChartTime)
+
+**Solution:**
+- Set Countdown Clock to "WallClock" for local time
+- Verify CSV timezone is UTC (default)
+
+### Blackout Windows Not Appearing
+
+**Check:**
+- "Enable Blackout High/Medium" is checked
+- Events are High or Medium impact
+- Blackout Opacity > 0
+
+**Solution:**
+- Increase Blackout Opacity to 25% for visibility
+- Verify events exist with Indicators > Properties > Debug Mode
+
+### Currency Filter Not Working
+
+**Check:**
+- "Enable Currency Filter" is checked
+- At least one currency checkbox is enabled
+- Events have currency data in CSV
+
+**Solution:**
+- Disable filter temporarily to see all events
+- Re-enable and check only desired currencies
+
+---
+
+## 14-Day Free Trial
+
+### Try Before You Buy
+
+**BadBuddha NewsMarkers PRO** includes a **14-day free trial** with complete functionality:
+
+- All features unlocked
+- No credit card required
+- No feature limitations
+- Full support during trial
+
+After 14 days, a license is required to continue using the indicator.
+
+### How to Activate Trial
+
+1. Install the indicator following the installation steps above
+2. Add to any chart
+3. Trial automatically begins on first use
+4. Monitor trial days remaining in indicator properties
+
+### Purchase After Trial
+
+Contact BadBuddha Customs to purchase a full license and continue using all PRO features.
+
+---
+
+## Support
+
+### Getting Help
+
+- **Website**: [BadBuddha Customs](https://badbuddhacustoms.com)
+- **Email Support**: support@badbuddhacustoms.com
+- **Update Notifications**: Automatic via indicator (checks daily)
+
+### Staying Updated
+
+The indicator includes automatic update checking:
+- Checks for new versions every 24 hours
+- Displays popup with version info and changelog
+- Direct download link to latest release
+- Can be disabled in settings (Group 10)
+
+---
+
+## Summary
+
+**BadBuddha NewsMarkers PRO** is the complete news calendar solution for traders who need:
+
+- Visual warnings for high-volatility events
+- Customizable blackout windows
+- Real-time countdown timers
+- Currency filtering for focused trading
+- Strategy API for automated systems
+- Automated data updates
+- Priority support
+
+**Perfect for:**
+- Day traders (ES, NQ, YM, CL, GC)
+- Forex traders (all major pairs)
+- Automated strategy developers
+- Multi-timeframe traders
+- Anyone who wants to avoid news whipsaws
+
+---
+
+<div align="center">
+
+### Try Risk-Free for 14 Days
+
+**Stop losing money to unexpected news events. Protect your capital today.**
+
+[Contact BadBuddha Customs](https://badbuddhacustoms.com)
+
+---
+
+**Made with precision by BadBuddha Customs LLC**
+
+*Professional NinjaTrader 8 Tools for Serious Traders*
+
+Copyright © 2025 BadBuddha Customs LLC
 
 ---
 
 **Disclaimer**: This indicator is provided for informational purposes only. Trading involves substantial risk of loss. Past performance is not indicative of future results. Always conduct your own research and risk assessment before trading.
+
+</div>
