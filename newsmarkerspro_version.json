@@ -1,19 +1,9 @@
 {
-  "version": "v4.1.0.0",
-  "notes": "Filtering and code cleanup.",
-  "downloadUrl": "https://github.com/badbuddhatrades/BadBuddhaNewsMarkersPro",
-  "published": "2025-11-04",
-  "author": "BadBuddhaCustoms",
-  "breakingChanges": false,
-  "changelog": [
-    "Ability to filter by currency",
-    "Full Release",
-    "Exposed items for Strategy Calls",
-    "Ability to see Past and Future released events",
-    "Capable of backtesting events",
-    "Added Popout or Overlay table",
-    "Add Due time timer for events",
-    "User based licensing",
-    "Phase 1 alerting system"
-  ]
+  "product": "BadBuddha NewsMarkers PRO",
+  "version": "4.5.2.0",
+  "releaseDate": "2026-01-07",
+  "type": "indicator",
+  "tier": "pro",
+  "minNinjaTraderVersion": "8.1.0.0",
+  "downloadUrl": "https://ninjascript-downloads.badbuddhacustoms.workers.dev/download/NewsMarkers-PRO/4.5.2.0?source=update"
 }
